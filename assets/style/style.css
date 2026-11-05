@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: clamp(16px, 4vw, 24px);
+}
+
+.card h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 8px;
+}
+
+#total-balance {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+#total-balance h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 8px;
+}
+
+#balance {
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-weight: 700;
+  color: #000000;
+}
+
+#input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  background-color: #f5f5f5;
+}
+
+button#add-transaction {
+  margin-top: 8px;
+  padding: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button#add-transaction:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#output-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  #output-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+#history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.item-amount {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.item-badge {
+  font-size: 0.65rem;
+  border: 1px solid #000000;
+  padding: 2px 6px;
+  border-radius: 2px;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.btn-delete {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-delete:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px;
+}
